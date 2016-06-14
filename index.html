@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Trabajos-fin-de-grado : Propuestas de Trabajos Fin de Grado ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Trabajos-fin-de-grado</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/gortazar/trabajos-fin-de-grado">View on GitHub</a>
+
+          <h1 id="project_title">Trabajos-fin-de-grado</h1>
+          <h2 id="project_tagline">Propuestas de Trabajos Fin de Grado </h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/gortazar/trabajos-fin-de-grado/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/gortazar/trabajos-fin-de-grado/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="propuestas-de-trabajos-fin-de-grado" class="anchor" href="#propuestas-de-trabajos-fin-de-grado" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Propuestas de Trabajos Fin de Grado</h1>
+
+<p>Aquí puedes encontrar mis propuestas de TFG para alumnos de la <a href="http://www.urjc.es">URJC</a>. Si te interesa alguna de ellas, ábreme un <a href="https://github.com/gortazar/tfgs/issues">issue</a> indicándome porqué te interesa la propuesta, de qué titulación eres y en qué curso estás y me pondré en contacto contigo para comenzar.</p>
+
+<p>Todos los proyectos serán publicados como software libre en esta misma plataforma. Por tanto, cojas el proyecto que cojas acabarás como mínimo aprendiendo Git y GitHub.</p>
+
+<h2>
+<a id="rendimiento-de-kurento-en-múltiples-infraestructuras" class="anchor" href="#rendimiento-de-kurento-en-m%C3%BAltiples-infraestructuras" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Rendimiento de Kurento en múltiples infraestructuras</h2>
+
+<p><a href="http://www.kurento.org">Kurento</a> es un servidor de media compatible WebRTC que puede utilizarse para contruir aplicaciones de videoconferencia, clases online con vídeo y audio y aplicaciones de realidad aumentada.</p>
+
+<p>El objetivo de este proyecto es estudiar la escalabilidad de Kurento en producción. Para ello, con la ayuda del tutor, se establecerán diferentes métricas para medir la calidad en gestión de media y se diseñarán varios escenarios (videoconferencia, transcodificación, etc) de prueba. Para cada escenario de prueba, se medirá la calidad en diferentes despliegues:</p>
+
+<ul>
+<li>Nativo (instalado directamente sobre un OS anfitrión corriendo en hardware físico)</li>
+<li>Virtualizado (instalado en una máquina virtual) en diferentes proveedores:
+
+<ul>
+<li>Amazon AWS</li>
+<li>Azure</li>
+<li>Openstack</li>
+</ul>
+</li>
+<li>Corriendo en contenedores:
+
+<ul>
+<li>Docker sobre hardware real</li>
+<li>Docker sobre máquina virtual</li>
+<li>Docker en alguna infraestructura (Kubernetes, Amazon ECR, Azure Container Service o Apache Mesos a través de DCOS)</li>
+</ul>
+</li>
+</ul>
+
+<p>El proyecto incluye:</p>
+
+<ul>
+<li>Desarrollar el sw necesario de gestión de la configuración para poder automatizar los despliegues (no se harán despliegues a mano)</li>
+<li>Desarrollar los casos de test que se probarán a partir de casos que ya existen</li>
+<li>Ejecutar los escenarios</li>
+<li>Recoger los resultados</li>
+<li>Analizar los resultados obtenidos</li>
+</ul>
+
+<p><strong>Competencias desarrolladas</strong>: git, github, cloud, contenedores (Docker), testing, gestión de la configuración (devops)</p>
+
+<h2>
+<a id="comparativa-de-despliegue-y-autoescalado-de-contenedores-docker" class="anchor" href="#comparativa-de-despliegue-y-autoescalado-de-contenedores-docker" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Comparativa de despliegue y autoescalado de contenedores Docker</h2>
+
+<p><a href="https://www.docker.com">Docker</a> permite empaquetar y ejecutar aplicaciones en un entorno aislado, permitiendo incluso limitar los recursos que dichas aplicaciones utilizan del SO anfitrión en el que se ejecutan. Es una tecnología similar en funcionalidades a la virtualización, pero no hay una máquina virtual, sino que todas las características de aislamiento las proporciona el propio sistema operativo. A este tipo de tecnología se la denomina genéricamente <em>contenedores</em> y Docker es una de las implementaciones más exitosas y conocidas de este concepto (existen otras como rkt, lxc, OpenVZ, ...). El concepto de contenedor se ha extendido hasta el punto que los principales proveedores cloud proporcionan soporte para Docker de forma nativa (como Amazon AWS y Azure).</p>
+
+<p>Se está hablando mucho de Docker para desplegar arquitecturas como Microservicios. Pero, ¿qué complicaciones implica desplegar un sistema compuesto de múltiples aplicaciones usando Docker?</p>
+
+<p>El objetivo del proyecto es comparar diferentes infraestructuras que permiten desplegar servicios usando Docker. Se compararán al menos las siguientes infraestructuras:</p>
+
+<ul>
+<li>Docker Swarm: un cluster de máquinas virtuales corriendo Docker que permite desplegar aplicaciones distribuidas por el cluster</li>
+<li>Amazon ECR: el soporte para Docker de Amazon</li>
+<li>Azure Container Service: el soporte para Docker de Azure</li>
+<li>Kubernetes: un cluster para desplegar contenedores Docker que tiene sus propias herramientas para definir servicios y cómo interactúan entre ellos</li>
+<li>Mesos/DCOS: un sistema operativo distribuido para la nube</li>
+</ul>
+
+<p>Se estudiarán y compararán características de cada uno de los sistemas probando a desplegar una aplicación compuesta de varios servicios. Entre otras, se medirán las siguientes características:</p>
+
+<ul>
+<li>Facilidad de puesta en marcha</li>
+<li>Compatibilidad con Docker Engine, Docker Compose y Docker Swarm</li>
+<li>Facilidad de despliegue de contenedores con puertos expuestos (apps web)</li>
+<li>Facilidad de despliegue de contenedores linkados (apps web + db)</li>
+<li>Facilidad de actualización de contenedores en runtime (actualizar la app web)</li>
+<li>Capacidad de gestionar persistencia (base de datos a disoc del host o similar)</li>
+<li>Soporte de grupos de autoescalado</li>
+</ul>
+
+<p><strong>Competencias desarrolladas</strong>: git, github, cloud, contenedores, Docker, sistemas distribuidos, gestión de la configuración, tecnologías relacionadas con Docker (Kubernetes, Mesos, Amazon ECR, Azure CS).</p>
+
+<h2>
+<a id="plugin-de-jenkins-para-visualizar-claramente-las-causas-de-fallo-de-los-jobs" class="anchor" href="#plugin-de-jenkins-para-visualizar-claramente-las-causas-de-fallo-de-los-jobs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plugin de Jenkins para visualizar claramente las causas de fallo de los jobs</h2>
+
+<p><a href="https://jenkins.io">Jenkins</a> es probablemente el sistema de integración continua (CI) más conocido y utilizado. Es software libre y está escrito en Java. Jenkins se utiliza para construir proyectos, pasar tests y hacer despliegues. Cada una de estas tareas se define en lo que se denomina un <em>job</em> o tarea.</p>
+
+<p>El objetivo del proyecto es implementar un plugin de Jenkins que se integrará con la interfaz de usuario de Jenkins para visualizar claramente cuál es la causa de fallo de un job:</p>
+
+<ul>
+<li>Cuando falla un único test visualizar directamente el mensaje de error de dicho test</li>
+<li>Cuando fallan varios tests, agrupar errores y mostrar las causas agrupadas con el número de apariciones.  P.ej: NullPointerException(3), IndexOutOfBounds(2), assert failed (1)</li>
+<li>Poder asociar mediante expresiones regulares mensajes de error en la ejecución del job a mensajes a mostrar directamente en la página principal del job</li>
+<li>Proporcionar una nueva columna en la vista de tareas que indique la causa del fallo</li>
+</ul>
+
+<p><strong>Competencias desarrolladas</strong>: git, github, Java, Jenkins, testing, integración continua.</p>
+
+<h2>
+<a id="plugin-de-jenkins-para-visualizar-el-estado-general-del-entorno-de-integración-continua" class="anchor" href="#plugin-de-jenkins-para-visualizar-el-estado-general-del-entorno-de-integraci%C3%B3n-continua" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plugin de Jenkins para visualizar el estado general del entorno de integración continua</h2>
+
+<p><a href="https://jenkins.io">Jenkins</a> es probablemente el sistema de integración continua (CI) más conocido y utilizado. Es software libre y está escrito en Java. Jenkins se utiliza para construir proyectos, pasar tests y hacer despliegues. Cada una de estas tareas se define en lo que se denomina un <em>job</em> o tarea.</p>
+
+<p>Normalmente las tareas o jobs que ejecuta Jenkins se pueden dividir en categorías:</p>
+
+<ul>
+<li>Tareas que se ejecutan cada vez que los desarrolladores suben cambios al repositorio de código. Normalmente estas tareas deben durar poco.</li>
+<li>Tareas que se ejecutan cuando un cambio es aceptado y mezclado en la rama de desarrollo del proyecto. Estas tareas pueden ejecutar tests más exhaustivos.</li>
+<li>Tareas que se ejecutan cuando se quiere publicar una nueva release. Estas tareas normalmente publican los artefactos generados en algún repositorio de binarios.</li>
+</ul>
+
+<p>El objetivo del proyecto es visualizar el estado de estas tareas. Para ello, se establecerán alarmas y se presentará un panel informativo con los problemas detectados:</p>
+
+<ul>
+<li>Jobs de cambios que empiezan a fallar sistemáticamente</li>
+<li>Jobs de release que fallan</li>
+<li>Artefactos resultado de los jobs que no están correctamente publicados</li>
+</ul>
+
+<p><strong>Competencias desarrolladas</strong>: git, github, Java, Jenkins, testing, integración continua</p>
+
+<h2>
+<a id="plugin-de-jenkins-para-generar-gráficas-de-rendimiento" class="anchor" href="#plugin-de-jenkins-para-generar-gr%C3%A1ficas-de-rendimiento" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plugin de Jenkins para generar gráficas de rendimiento</h2>
+
+<p><a href="https://jenkins.io">Jenkins</a> es probablemente el sistema de integración continua (CI) más conocido y utilizado. Es software libre y está escrito en Java. Jenkins se utiliza para construir proyectos, pasar tests y hacer despliegues. Cada una de estas tareas se define en lo que se denomina un <em>job</em> o tarea.</p>
+
+<p>En ocasiones es necesario conocer el rendimiento de dichas tareas en términos de memoria, uso de CPU, etc. El objetivo de este proyecto es desarrollar un plugin para Jenkins que permita activar o desactivar estas medidas de rendimiento. Para ello, se introducirá un comando específico en el <a href="https://github.com/jenkinsci/docker-workflow-plugin">pipeline de Docker</a> que el usuario podrá utilizar para indicar qué métricas de rendimiento desea tomar.</p>
+
+<p>Las métricas se tomarán con perf, una herramienta Linux diseñada específicamente para ello y de sencillo uso, y posteriormente se transformarán en <a href="http://www.brendangregg.com/flamegraphs.html">Flame Graphs</a> mediante la utilidad desarrollada por Brendan Gregg (Netflix). Dichos gráficos se mostrarán en la interfaz de la tarea Jenkins.</p>
+
+<p><strong>Competencias desarrolladas</strong>: git, github, Java, Jenkins, performance monitoring, devops, docker, flame graphs.</p>
+
+<h2>
+<a id="herramienta-de-chequeo-de-releases" class="anchor" href="#herramienta-de-chequeo-de-releases" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Herramienta de chequeo de releases</h2>
+
+<p>Desarrollar una herramienta con Spring Boot y frontend Angular para chequear la validez de la publicación de las diferentes versiones de un proyecto. Normalmente cuando se construye un proyecto se generan múltiples artefactos (.jar, .war, ejecutables, ...) que hay que publicar en determinados sitios (Maven Central, un repositorio privado, ...) para que puedan ser desplegados en producción. Además, suele ser habitual marcar el código de la versión mediante un tag en el repositorio de código.</p>
+
+<p>El objetivo del proyecto es construir una aplicación basada en Spring Boot con una interfaz web (en Angular) que permita:</p>
+
+<ul>
+<li>Dar de alta diferentes proyectos y sus artefactos asociados</li>
+<li>Debe soportar los siguientes tipos de artefactos:
+
+<ul>
+<li>Java: librerías publicadas en Maven Central o en un repositorio privado (Archiva)</li>
+<li>Javascript: librerías publicadas en npm y en bower</li>
+<li>Paquetes debian publicados en repositorios públicos</li>
+<li>Tags en repositorios en GitHub</li>
+</ul>
+</li>
+<li>Debe permitir verificar para las versiones que se especifiquen si todos los artefactos están disponibles en los sitios donde deben haber sido publicados</li>
+</ul>
+
+<p><strong>Competencias desarrolladas</strong>: git, GitHub, Java, Spring, Javascript, Angular, Jenkins, testing, REST</p>
+
+<h2>
+<a id="herramienta-de-análisis-de-log" class="anchor" href="#herramienta-de-an%C3%A1lisis-de-log" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Herramienta de análisis de log</h2>
+
+<p>Desarrollar un servicio web que permita entrenar una red neuronal para intentar determinar las causas de fallo de los jobs en Jenkins. Funcionalidades:</p>
+
+<ul>
+<li>Servicio web rest con frontend angular</li>
+<li>Posibilidad de configurar el servidor jenkins a interrogar</li>
+<li>Se recoge información de los jobs de Jenkins seleccionados
+
+<ul>
+<li>Si hay tests -&gt; información de los tests (causa de fallo de cada test)</li>
+<li>Si no hay resultados de tests -&gt; Salida estándar</li>
+</ul>
+</li>
+<li>La información se guarda en una bbdd</li>
+<li>El usuario puede asociar una causa concreta a cada job fallido. Puede hacerlo en cualquier momento</li>
+<li>Con la información de las causas de error de los jobs (de algunos de ellos, no necesariamente todos) se entrena una red neuronal</li>
+<li>Se probarán diferentes redes neuronales disponibles en Spark o en Deeplearning4Java (red neuronal, deep learning, recurrent network)</li>
+<li>Se harán iteraciones cortas y releases frecuentes. La app debe estar corriendo en todo momento en un servidor proporcionado por el profesor</li>
+</ul>
+
+<p><strong>Competencias desarrolladas</strong>: git, github, Java, ElasticSearch, Logstash, Jenkins, redes neuronales</p>
+
+<h1>
+<a id="construcción-automática-de-eclipsegavab-e-incorporación-de-libs-adicionales-a-pascaline" class="anchor" href="#construcci%C3%B3n-autom%C3%A1tica-de-eclipsegavab-e-incorporaci%C3%B3n-de-libs-adicionales-a-pascaline" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Construcción automática de EclipseGavab e incorporación de libs adicionales a Pascaline</h1>
+
+<ul>
+<li>Construcción desatendida de EclipseGavab:
+** Descarga de herramientas necearias (Ruby, Haskell, FreePascal, JRE, ...) en el caso de Win
+** Construcción del IDE para las diferentes plataformas</li>
+<li>Ciclo de release: construcción y publicación en bintray automáticas</li>
+<li>IDEConfigurator: detectar en Linux herramientas que faltan y visualizar los comandos necesarios para instalarlas</li>
+</ul>
+
+<h1>
+<a id="eclipse-che" class="anchor" href="#eclipse-che" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Eclipse Che</h1>
+
+<ul>
+<li>Montar la infraestructura</li>
+<li>Estudiar diferentes despliegues</li>
+<li>Integración con git</li>
+<li>Proceso de desarrollo con Che (interacción del equipo, compartición de estilos entre workspaces, Jenkins...)</li>
+</ul>
+
+<h1>
+<a id="ejecutores-jenkins-con-monitorización-asignado" class="anchor" href="#ejecutores-jenkins-con-monitorizaci%C3%B3n-asignado" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ejecutores Jenkins con monitorización (asignado)</h1>
+
+<h1>
+<a id="ui-para-monitorización-asignado" class="anchor" href="#ui-para-monitorizaci%C3%B3n-asignado" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>UI para monitorización (asignado)</h1>
+
+<h1>
+<a id="análisis-de-logs-big-data-con-sparkes-asignado" class="anchor" href="#an%C3%A1lisis-de-logs-big-data-con-sparkes-asignado" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Análisis de logs Big Data con Spark+ES (asignado)</h1>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Trabajos-fin-de-grado maintained by <a href="https://github.com/gortazar">gortazar</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
