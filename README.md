@@ -130,7 +130,7 @@ Desarrollar un servicio web que permita entrenar una red neuronal para intentar 
 
 **Competencias desarrolladas**: git, github, Java, ElasticSearch, Logstash, Jenkins, redes neuronales
 
-# Construcción automática de EclipseGavab e incorporación de libs adicionales a Pascaline
+## Construcción automática de EclipseGavab e incorporación de libs adicionales a Pascaline
 
 * Construcción desatendida de EclipseGavab:
 ** Descarga de herramientas necearias (Ruby, Haskell, FreePascal, JRE, ...) en el caso de Win
@@ -138,15 +138,15 @@ Desarrollar un servicio web que permita entrenar una red neuronal para intentar 
 * Ciclo de release: construcción y publicación en bintray automáticas
 * IDEConfigurator: detectar en Linux herramientas que faltan y visualizar los comandos necesarios para instalarlas
 
-# Eclipse Che
+## Eclipse Che
 
 * Montar la infraestructura
 * Estudiar diferentes despliegues
 * Integración con git
 * Proceso de desarrollo con Che (interacción del equipo, compartición de estilos entre workspaces, Jenkins...)
 
-# Ejecutores Jenkins con monitorización (asignado)
+## Ejecutores Jenkins con monitorización (asignado)
 
-# UI para monitorización (asignado)
+## UI para monitorización (asignado)
 
-# Análisis de logs Big Data con Spark+ES (asignado Javier Cabezas)
+## Análisis de logs Big Data con Spark+ES (asignado Javier Cabezas)
