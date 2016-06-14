@@ -149,4 +149,4 @@ Desarrollar un servicio web que permita entrenar una red neuronal para intentar 
 
 ## UI para monitorización (asignado)
 
-## Análisis de logs Big Data con Spark+ES (asignado Javier Cabezas)
+## Análisis de logs Big Data con Spark+ES (asignado)
